@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02/14/2024</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong> DEAR BB SOR </strong>
+                        <p>
+                            I JUST WANNA START SAYING HAPPY VALENTINE'S DAY!
+                            I LOVE YOU SO MUCH WITH ALL OF MY HEART. THANK YOU FOR STARTING MY EVERYDAY OFF RIGHT AND MAKING IT A LITTLE BRIGHTER.
+                            I'M SO GLAD THAT I MET YOU AND BECOMING BEST PART OF MY LIFE. I WILL ALWAYS SUPPORT YOU ON EVERYTHING THAT YOU DO. 
+                            AND I WILL MAKE OUR LIFE BETTER. I WILL ALWAYS CONTINUE TO GROW AND BE BETTER TO MAKE SURE THAT I WILL BE THE BEST PERSON YOU CAN HAVE.
+                            I WILL ALWAYS BE HERE WHENEVER YOU NEEDED SOMEONE TO LEAN AND DEPEND ON. I WILL LISTEN ON EVERYTHING YOU HAS TO SAY.
+                            ALWAYS REMEMBER THAT I'M ALWAYS YOURS AND I WILL NOT CHANGE THE WAY I LOVE YOU. DI KITA IPAGPAPALIT SA KAHIT SINO MAN DIYAN.
+                            KASI IKAW LANG ANG NAG IISANG BB WINDSOR KO BWAHAHAHHAA. KAYA WAG MO KONG PAG PAPALIT. HAHANTINGIN KITA SANG LUPALOP NG MUNDO.
+                            KALTOK KANG MALALA SAKIN. 
+                            I WANNA CREATE MORE MEMORIES WITH YOU AND BUILD  OUR RELATIONSHIP THAT LASTS FOREVER.
+                            I LOVE YOU ALWAYS.
+                            <br>
+                            <BR>
+                            LOVE, <BR>
+                            BB TANPROTEIN 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            const numberOfHearts = 50; // Number of hearts you want to generate
+            for (let i = 0; i < numberOfHearts; i++) {
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                // Randomize the position to be either on the left or right side
+                const isLeft = Math.random() < 0.5;
+                if (isLeft) {
+                    heart.style.left = Math.random() * window.innerWidth * 0.4 + "px"; // Adjust the multiplier to change the range
+                } else {
+                    heart.style.left = Math.random() * window.innerWidth * 0.4 + window.innerWidth * 0.6 + "px"; // Adjust the multiplier and addendum to change the range
+                }
+                // Randomize the vertical position
+                heart.style.top = Math.random() * window.innerHeight + "px";
+                document.body.appendChild(heart);
+    
+                // Add CSS animation to the heart
+                const animationDuration = Math.random() * 3 + 2; // Random duration between 2 and 5 seconds
+                heart.style.animation = `float ${animationDuration}s infinite ease-in-out`; // Apply the animation
+            }
+        });
+    </script>
+</body>
+</html>
